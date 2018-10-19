@@ -13,8 +13,9 @@ vi:
     home:
       title: "Trang chủ"
   users:
-    new:
+    show:
       info: "Thông Tin"
+    new:
       signup: "Đăng kí"
       role: "Vai trò"
       employeer: "Nhà tuyển dụng"

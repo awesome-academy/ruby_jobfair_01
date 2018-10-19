@@ -1,0 +1,10 @@
+max_length_name: 50
+max_length_mail: 255
+min_length_pass: 6
+min_length_phone: 10
+max_length_phone: 11
+max_length_add: 80
+role: 1
+max_length_title: 100
+max_length_rank: 255
+max_length_lang: 255

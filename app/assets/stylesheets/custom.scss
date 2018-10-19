@@ -1,4 +1,3 @@
-@import 'bootstrap';
 @import 'color';
 
 @mixin box_sizing {
@@ -36,7 +35,11 @@ p {
 
 /* forms */
 
-.user_info{
+.signup {
+  margin-left: 100px
+}
+
+.user_info {
   p {
     padding-left: 50px;
   }
@@ -45,10 +48,19 @@ p {
 input, textarea, select, .uneditable-input {
   border: 1px solid $gray-ligth-mid;
   width: 100%;
-  margin-bottom: 15px;
   @include box_sizing;
 }
 
 input {
   height: auto !important;
+}
+
+/* footer*/
+.footer {
+  margin-top: 40px;
+}
+
+/* header */
+.header {
+  margin-bottom: 40px;
 }
