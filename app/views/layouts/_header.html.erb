@@ -10,12 +10,34 @@
           <li class="nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
             <%= link_to "Create CV", "#" %>
           </li>
-          <li class="nav-item  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+          <li class="nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
             <%= link_to "Create Job", "#" %>
           </li>
+          <li class="nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+            <li><%= link_to t(".language1"), locale: "en" %></li>
+          </li>
+          <li class="nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+            <li><%= link_to t(".language2"), locale: "vi" %></li>
+          </li>
         </ul>
-        <%= link_to t("signup"), "#", class: "btn w3ls-btn text-uppercase font-weight-bold d-block" %>
-        <%= link_to t("login"), "#", class: "btn w3ls-btn btn-2 ml-lg-1 text-uppercase font-weight-bold d-block" %>
+        <% if logged_in? %>
+        <li><%= link_to t(".users"), users_path %></li>
+        <li class="dropdown">
+          <%= link_to "#", :class=>"dropdown-toggle", :data=>{:toggle=>"dropdown"} do %>
+            <%= t(".account")%>
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to t(".profile"), current_user %></li>
+            <li><%= link_to t(".settings"), edit_user_path(current_user) %></li>
+            <li class="divider"></li>
+            <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
+          </ul>
+        </li>
+        <% else %>
+        <%= link_to t("signup"), signup_path, class: "btn w3ls-btn text-uppercase font-weight-bold d-block" %>
+        <%= link_to t("login"), login_path, class: "btn w3ls-btn btn-2 ml-lg-1 text-uppercase font-weight-bold d-block" %>
+        <% end %>
       </div>
     </nav>
   </div>
