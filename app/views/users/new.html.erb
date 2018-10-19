@@ -1,41 +1,41 @@
-<% provide :title,  t ".signup"  %>
+<% provide :title,  t(".signup")  %>
 <h1><%= t ".signup" %></h1>
 
-<div class="row">
+<div class="row signup">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @user, url: signup_path, local: true do |f| %>
       <%= render "shared/error_messages", object: f.object %>
 
-      <%= f.label :role, t ".role"  %>
+      <%= f.label :role, t(".role")  %>
       <%= t ".employeer" %><%= f.radio_button :role, "1", checked: true %>
       <%= t ".candidate" %><%= f.radio_button :role, "2" %><br>
 
-      <%= f.label :name, t ".name" %>
+      <%= f.label :name, t(".name") %>
       <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label :email, t ".email" %>
+      <%= f.label :email, t(".email") %>
       <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label :birthday, t ".birthday" %>
+      <%= f.label :birthday, t(".birthday") %>
       <%= f.text_field :birthday, class: "form-control" %>
 
-      <%= f.label :gender, t ".gender"  %>
+      <%= f.label :gender, t(".gender")  %>
       <%= f.radio_button :gender, "male", checked: true %><%= t ".male" %>
       <%= f.radio_button :gender, "female" %><%= t ".female" %><br>
 
-      <%= f.label :phone, t ".phone" %>
+      <%= f.label :phone, t(".phone") %>
       <%= f.text_field :phone, class: "form-control" %>
 
-      <%= f.label :address, t ".address" %>
+      <%= f.label :address, t(".address") %>
       <%= f.text_field :address, class: "form-control" %>
 
-      <%= f.label :password, t ".password" %>
+      <%= f.label :password, t(".password") %>
       <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label :password_confirmation, t ".repass" %>
+      <%= f.label :password_confirmation, t(".repass") %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
 
-      <%= f.submit t ".create_acc" , class: "btn btn-primary" %>
+      <%= f.submit t(".create_acc") , class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

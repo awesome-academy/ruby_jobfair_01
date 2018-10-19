@@ -1,5 +1,6 @@
-@import 'bootstrap';
 @import 'color';
+
+/* mixins, variables, etc. */
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -36,7 +37,11 @@ p {
 
 /* forms */
 
-.user_info{
+.signup {
+  margin-left: 100px
+}
+
+.user_info {
   p {
     padding-left: 50px;
   }
@@ -45,10 +50,74 @@ p {
 input, textarea, select, .uneditable-input {
   border: 1px solid $gray-ligth-mid;
   width: 100%;
-  margin-bottom: 15px;
   @include box_sizing;
 }
 
 input {
   height: auto !important;
+}
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.checkbox {
+  margin: -10px 0 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* footer*/
+.footer {
+  margin-top: 40px;
+}
+
+/* header */
+.header {
+  margin-bottom: 40px;
+}
+
+#hung_style{
+  margin:0 auto;
+  position:relative;
 }
