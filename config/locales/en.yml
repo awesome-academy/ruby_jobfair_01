@@ -37,3 +37,58 @@ en:
   error:
     contain: "Contain"
     errors: "errors"
+  sessions:
+    new:
+      login: "Login"
+      email: "Email"
+      pwd: "Passsword"
+      remember: "Remember me"
+      new_user: "New user? "
+      signup_now: "Sign up now"
+      forgot_password: "(Forgot password)"
+  layouts:
+    header:
+      quick_job_search: "Quick Job Search"
+      language1: "English"
+      language2: "Vietnamese"
+      home: "Home"
+      help: "Help"
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      log_in: "Log in"
+  password_resets:
+    edit:
+      reset_pwd: "Reset Passsword"
+      pwd: "Passsword"
+      pwd_confirmation: "Confirmation"
+      update: "Update Passsword"
+    new:
+      forgot_pwd: "Forgot Passsword"
+      email: "Email"
+      submit: "Submit"
+  user_mailer:
+    account_activation:
+      hi:  "Hi"
+      click_to_activate: "Click to activate your account"
+      activate: "Activate"
+    password_reset:
+      click_link: "To reset your password click the link below"
+      reset_password: "Reset Passsword"
+      expire_time: "This link will expire in two hours"
+      ignore: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+  activated: "Account activated!"
+  link_invalid: "Invalid activation link"
+  email_pwd_reset: "Email sent with password reset instructions"
+  email_not_found: "Email address not found"
+  can't_be_empty: "Email can't be empty"
+  reset_pwd_success: "Reset passsword success"
+  pwd_reset_expired: "Passsword reset has expired"
+  login_error: "Invalid email/password combination"
+  not_activated_check_email: "Account not activated. Check your email for the activation link."
+  subject1: "Account activation"
+  subject2: "Reset password"
+  require_check_email: "Please check your email to activate your account."
