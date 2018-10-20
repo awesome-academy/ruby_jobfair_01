@@ -38,3 +38,57 @@ vi:
   error:
     contain: "Có"
     errors: "lỗi"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      email: "Email"
+      pwd: "Mật khẩu"
+      remember: "Nhớ tôi"
+      new_user: "Người dùng mới? "
+      signup_now: "Đăng ký ngay"
+      forgot_password: "(Quên mật khẩu)"
+  layouts:
+    header:
+      quick_job_search: "Tìm kiếm nhanh việc làm"
+      language1: "Tiếng Anh"
+      language2: "Tiếng Việt"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      users: "Danh sách người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ cá nhân"
+      settings: "Cài đặt"
+      log_out: "Đăng xuất"
+      log_in: "Đăng nhập"
+  password_resets:
+    edit:
+      reset_pwd: "Đặt lại mật khẩu"
+      pwd: "Mật khẩu"
+      pwd_confirmation: "Xác nhận"
+      update: "Cập nhật mật khẩu"
+    new:
+      forgot_pwd: "Quên mật khẩu"
+      email: "Email"
+      submit: "Gửi"
+  user_mailer:
+    account_activation:
+      hi:  "Chào"
+      click_to_activate: "Nhấp chuột để kích hoạt tài khoản của bạn"
+      activate: "Kích hoạt"
+    password_reset:
+      click_link: "Để đặt lại mật khẩu của bạn nhấp chuột vào liên kết bên dưới"
+      reset_password: "Đặt lại mật khẩu"
+      expire_time: "Liên kết sẽ hết hạn trong hai giờ"
+      ignore: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."
+  activated: "Đã kích hoạt tài khoản!"
+  link_invalid: "Liên kết kích hoạt không chính xác"
+  email_pwd_reset: "Email được gửi với hướng dẫn đặt lại mật khẩu"
+  email_not_found: "Không tìm thấy địa chỉ email"
+  can't_be_empty: "Email không được trống"
+  reset_pwd_success: "Đặt lại mật khẩu thành công"
+  pwd_reset_expired: "Đặt lại mật khẩu đã hết hạn"
+  login_error: "Kết hợp email/mật khẩu không chính xác"
+  not_activated_check_email: "Tài khoản chưa kích hoạt. Kiểm tra email để thấy liên kết kích hoạt"
+  subject1: "Kích hoạt tài khoản"
+  subject2: "Đặt lại mật khẩu"
+  require_check_email: "Please check your email to activate your account."
