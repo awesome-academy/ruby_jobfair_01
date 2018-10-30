@@ -10,7 +10,7 @@ gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "date_validator", "~> 0.9.0"
-gem "faker", "1.9.1"
+gem "ffaker", "2.10.0"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "kaminari"
@@ -19,6 +19,8 @@ gem "rails", "~> 5.2.1"
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "wicked_pdf"
+gem "wkhtmltopdf-binary"
 
 group :development, :test do
   gem "byebug", platforms: %i(mri mingw x64_mingw)

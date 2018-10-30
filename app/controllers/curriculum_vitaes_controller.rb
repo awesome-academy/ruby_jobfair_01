@@ -25,6 +25,16 @@ class CurriculumVitaesController < ApplicationController
   def show
     @user = @curriculum_vitae.users.find_by role: "candidate"
     @applieds = @curriculum_vitae.users.employeer
+    if @user
+      respond_to do |format|
+        format.html
+        format.pdf do
+          render pdf: "#{@user.name}_#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
+        end
+      end
+    else
+      flash[:danger] = t "not_found_cv"
+    end
   end
 
   def edit; end

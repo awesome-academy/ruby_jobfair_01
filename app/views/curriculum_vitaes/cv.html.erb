@@ -1,0 +1,45 @@
+<% provide :title, @user.name %>
+<div class="nobreak">
+  <div class="header">
+    <h1><%= @user.name %></h1><br>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="well">
+        <h2 id="info"><%= t "info" %></h2>
+        <h3><%= t("email") + @user.email %></h3>
+        <h3><%= t("birthday") + @user.birthday.to_s %></h3>
+        <h3><%= t("gender") + @user.gender %></h3>
+        <h3><%= t("phone") + @user.phone %></h3>
+        <h3><%= t("address") + @user.address %></h3>
+      </div>
+      <div class="well">
+        <h2 id="info"><%= t "skill" %></h2>
+        <h3><%= @curriculum_vitae.skill %></h3>
+      </div>
+      <div class="well">
+        <h2 id="info"><%= t "level" %></h2>
+        <h3><%= @curriculum_vitae.level %></h3>
+      </div>
+    </div>
+    <div class="col-xs-7">
+      <div class="well">
+        <h2 id="info"><%= t "objective" %></h2>
+        <h3><%= @curriculum_vitae.target %></h3>
+      </div>
+      <div class="well">
+        <h2 id="info"><%= t "experience" %></h2>
+        <h3><%= @curriculum_vitae.experience %></h3>
+      </div>
+       <div class="well">
+        <h2 id="info"><%= t "language" %></h2>
+        <h3><%= @curriculum_vitae.language %></h3>
+      </div>
+      <div class="well">
+        <h2 id="info"><%= t "note" %></h2>
+        <h3><%= @curriculum_vitae.note %></h3>
+      </div>
+    </div>
+  </div>
+</div>

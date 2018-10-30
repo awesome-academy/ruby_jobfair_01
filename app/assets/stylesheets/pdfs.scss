@@ -1,0 +1,20 @@
+.header {
+  background: #1fd1ce;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+#info {
+  color: #1fd1ce;
+}
+
+div.alwaysbreak {
+  page-break-before: always;
+}
+div.nobreak:before {
+  clear:both;
+}
+div.nobreak {
+  page-break-inside: avoid;
+}
