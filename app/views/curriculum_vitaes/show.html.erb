@@ -39,13 +39,15 @@
         <p><%= @curriculum_vitae.note %></p><br>
 
         <div class="button_cn">
+        <% if logged_in? %>
+          <%= link_to t(".export"), curriculum_vitae_path + ".pdf",
+            class: "btn btn-lg btn-info" %>
+        <% end %>
         <% if @user.current_user? current_user %>
-        <%= link_to t(".export"), curriculum_vitae_path + ".pdf",
-          class: "btn btn-lg btn-info" %>
-        <%= link_to t(".update"), edit_curriculum_vitae_path,
-          class: "btn btn-lg btn-success" %>
-        <%= link_to t(".delete"), @curriculum_vitae, method: :delete,
-          data: {confirm: t(".sure")}, class: "btn btn-lg btn-danger" %>
+          <%= link_to t(".update"), edit_curriculum_vitae_path,
+            class: "btn btn-lg btn-success" %>
+          <%= link_to t(".delete"), @curriculum_vitae, method: :delete,
+            data: {confirm: t(".sure")}, class: "btn btn-lg btn-danger" %>
         <% end %>
       </div>
       </div>
