@@ -39,6 +39,7 @@ vi:
       myCV: "CV của tôi"
       myJob: "Việc làm đã đăng"
       not_found: "Không tìm thấy người dùng!"
+      applied: "CV applied"
     new:
       signup: "Đăng kí"
       role: "Vai trò"

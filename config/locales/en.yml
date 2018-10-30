@@ -37,6 +37,7 @@ en:
       myCV: "My Curriculum Vitaes"
       myJob: "Jobs was post"
       not_found: "User not found!"
+      applied: "CV applied"
     new:
       signup: "Signup"
       role: "Role"

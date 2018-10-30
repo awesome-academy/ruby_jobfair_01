@@ -2,14 +2,14 @@
 <div >
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <%= image_tag "evolable-asia-logo.png" %>
       </div>
-      <div class="col-md-9 job_info">
+      <div class="col-md-8 job_info">
         <h1><%= @job.title%></h1>
 
         <h5><%= t ".company" %></h5><hr>
-        <p><%= @user.name %></p><br>
+        <p><%= link_to @user.name, @user %></p><br>
 
         <h5><%= t ".career" %></h5><hr>
         <p><%= @job.career.name %></p><br>

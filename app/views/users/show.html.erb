@@ -2,9 +2,10 @@
 <div class="row">
   <aside class="col-md-6">
     <section class="user_info">
-      <h1>
+      <h3>
         <%= t ".info" %>
-      </h1>
+      </h3>
+      <hr>
       <p><%= t ".name" %>:
         <%= @user.name %>
       </p>
@@ -24,13 +25,21 @@
         <%= @user.address %>
       </p>
     </section>
+    <div class="cv_applieds">
+      <% if @user.employeer? && @user.current_user?(current_user) %>
+        <h3><%= t ".applied" %> (<%= @user.curriculum_vitaes.count %>)</h3>
+        <ol class="cv">
+          <%= render @user.curriculum_vitaes %>
+        </ol>
+      <% end %>
+    </div>
   </aside>
   <div class="col-md-6">
     <% if @user.candidate? %>
       <% if @user.curriculum_vitaes.any? %>
         <h3><%= t ".myCV" %> (<%= @user.curriculum_vitaes.count %>)</h3>
         <ol class="cv">
-          <%= render @curriculum_vitaes %>
+          <%= render @user.curriculum_vitaes %>
         </ol>
       <% end %>
     <% else %>
