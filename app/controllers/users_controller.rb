@@ -18,9 +18,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @curriculum_vitaes = @user.curriculum_vitaes
-  end
+  def show; end
 
   private
 

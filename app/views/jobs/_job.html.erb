@@ -5,7 +5,7 @@
     <ul class="desc-list">
       <li>
         <span><%= t ".company" %></span>
-        <%= jobs_new(job).name %>
+        <%= link_to jobs_new(job).name, jobs_new(job) %>
       </li>
       <li>
         <span><%= t ".salary" %></span>
