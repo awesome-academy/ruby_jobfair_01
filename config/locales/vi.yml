@@ -67,7 +67,7 @@ vi:
       login: "Đăng nhập"
       email: "Email"
       pwd: "Mật khẩu"
-      remember: "Nhớ tôi"
+      remember: "Ghi nhớ tôi"
       new_user: "Người dùng mới? "
       signup_now: "Đăng ký ngay"
       forgot_password: "(Quên mật khẩu)"
@@ -114,11 +114,11 @@ vi:
   can't_be_empty: "Email không được trống"
   reset_pwd_success: "Đặt lại mật khẩu thành công"
   pwd_reset_expired: "Đặt lại mật khẩu đã hết hạn"
-  login_error: "Kết hợp email/mật khẩu không chính xác"
+  login_error: "Email hoặc mật khẩu không chính xác"
   not_activated_check_email: "Tài khoản chưa kích hoạt. Kiểm tra email để thấy liên kết kích hoạt"
   subject1: "Kích hoạt tài khoản"
   subject2: "Đặt lại mật khẩu"
-  require_check_email: "Please check your email to activate your account."
+  require_check_email: "Kiểm tra email của bạn để kích hoạt tài khoản."
   jobs:
     new:
       job: "Tạo Việc Làm"
@@ -207,11 +207,12 @@ vi:
       level: "Trình độ"
       experience: "Kinh nghiệm"
       language: "Ngoại ngữ"
+      note: "Ghi chú"
       create: "Tạo mới"
       permit: "Bạn không có quyền"
     create:
       success: "Đã tạo CV"
-      fail: "Failed to create CV"
+      fail: "Tạo CV thất bại"
     show:
       name: "Họ tên"
       email: "Email"
@@ -306,3 +307,58 @@ vi:
   level: "Trình độ"
   experience: "Kinh nghiệm"
   info: "Thông tin cá nhân"
+  activerecord:
+    models:
+      user: "Người dùng"
+      curriculum_vitae: "Hồ sơ"
+      job: "tin tuyển dụng"
+    attributes:
+      user:
+        name: "Tên"
+        password: "Mật khẩu"
+        birthday: "Ngày sinh"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
+        role: "Quyền"
+        gender: "Giới tính"
+        password_confirmation: "Xác nhận mật khẩu"
+      curriculum_vitae:
+        target: "Mục tiêu"
+        experience: "Kinh nghiệm"
+        skill: "Kỹ năng"
+        level: "Trình độ"
+        language: "Ngoại ngữ"
+      job:
+        career: "Ngành nghề"
+        title: "Tiêu đề"
+        salary: "Mức lương"
+        amount: "Số lượng"
+        rank: "Chức vụ"
+        skill: "Kỹ năng"
+        language: "Ngoại ngữ"
+        experience: "Kinh nghiệm"
+        description: "Mô tả"
+        publish_date: "Ngày đăng tin"
+        expiration_date: "Ngày hết hạn"
+    errors:
+      models:
+        user:
+          blank: "không được để trống"
+          invalid: "không hợp lệ"
+          not_a_date: "không hợp lệ"
+          not_a_number: "phải là số"
+          too_short: "quá ngắn"
+          inclusion: "chưa được chọn"
+          too_long: "quá dài"
+          taken: "đã tồn tại"
+          confirmation: "sai"
+        curriculum_vitae:
+          blank: "không được để trống"
+          too_long: "quá dài"
+        job:
+          required: "chưa được chọn"
+          blank: "không được để trống"
+          not_a_date: "không hợp lệ"
+          not_a_number: "phải là một số"
+          too_short: "quá ngắn"
+          too_long: "quá dài"

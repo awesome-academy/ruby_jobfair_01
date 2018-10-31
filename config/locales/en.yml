@@ -206,6 +206,7 @@ your password will stay as it is."
       level: "Level"
       experience: "Experience"
       language: "Language"
+      note: "Note"
       create: "Create"
       permit: "Not permit to create CV"
     create:
