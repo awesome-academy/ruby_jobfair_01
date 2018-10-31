@@ -15,7 +15,7 @@ en:
   find_by_job: "Job"
   search_career: "Career"
   search_company: "Company name, work place"
-  search_job: "Rank, salary"
+  search_job: "Job name, rank"
   search: "Search"
   r_login: "Please login!"
   static_pages:

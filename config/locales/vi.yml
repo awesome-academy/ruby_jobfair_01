@@ -17,7 +17,7 @@ vi:
   find_by_job: "Công việc"
   search_career: "Ngành nghề"
   search_company: "Tên công ty, địa điểm"
-  search_job: "Chức vụ, mức lương"
+  search_job: "Tên công việc, chức vụ"
   search: "Tìm việc"
   r_login: "Yêu cầu đăng nhập!"
   static_pages:
