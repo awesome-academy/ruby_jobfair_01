@@ -29,7 +29,7 @@ class CurriculumVitaesController < ApplicationController
       respond_to do |format|
         format.html
         format.pdf do
-          render pdf: "#{@user.name}_#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
+          render pdf: "#{@user.name}_#{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
         end
       end
     else
