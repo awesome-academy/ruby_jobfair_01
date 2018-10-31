@@ -1,6 +1,6 @@
 <% provide :title, @user.name %>
 <div class="row">
-  <aside class="col-md-6">
+  <aside class="col-lg-4">
     <section class="user_info">
       <h3>
         <%= t ".info" %>
@@ -34,7 +34,7 @@
       <% end %>
     </div>
   </aside>
-  <div class="col-md-6">
+  <div class="col-lg-8 line_left">
     <% if @user.candidate? %>
       <% if @user.curriculum_vitaes.any? %>
         <h3><%= t ".myCV" %> (<%= @user.curriculum_vitaes.count %>)</h3>
@@ -45,9 +45,9 @@
     <% else %>
       <% if @user.jobs.any? %>
         <h3><%= t ".myJob" %> (<%= @user.jobs.count %>)</h3>
-        <ol>
+        <div class="row">
           <%= render @user.jobs %>
-        </ol>
+        </div>
       <% end %>
     <% end %>
   </div>

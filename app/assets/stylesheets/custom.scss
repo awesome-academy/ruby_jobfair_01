@@ -219,3 +219,27 @@ aside {
     }
   }
 }
+
+.expried {
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: red;
+  padding: 5px;
+  border-radius: 15px;
+  margin-left: 10px;
+
+}
+
+.notify_expried {
+  color: red;
+  font-style: italic;
+  font-size: 15px;
+  text-align: right !important;
+}
+
+.line_left{
+  border-left: solid 1px gray;
+  padding-left: 50px !important;
+}

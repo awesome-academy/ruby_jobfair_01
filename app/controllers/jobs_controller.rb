@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   before_action :find_job, only: %i(show edit update destroy)
 
   def index
-    @jobs = Job.ordered.page(params[:page]).per Settings.per_sheet
+    @jobs = Job.job_expired.ordered.page(params[:page]).per Settings.per_sheet
     %w(career_name company_name job_info).each do |p|
       search_job p, @jobs
     end
@@ -46,6 +46,7 @@ class JobsController < ApplicationController
   end
 
   def update
+    @career_options = Job.career_options
     if @job.update job_params
       flash[:success] = t ".success"
       redirect_to @job

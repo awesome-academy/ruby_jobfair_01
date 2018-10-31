@@ -17,6 +17,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true,
     length: {minimum: Settings.min_length_pass}, allow_nil: true
+  validate :birth_day
   validates :birthday, presence: true, date: true
   validates :phone, presence: true, numericality: true,
     length: {minimum: Settings.min_length_phone,
@@ -91,5 +92,13 @@ class User < ApplicationRecord
   def create_activation_digest
     self.activation_token  = User.new_token
     self.activation_digest = User.digest(activation_token)
+  end
+
+  def birth_day
+    return unless birthday.presence
+    old = Date.current.year - birthday.year
+    return if birthday < Date.current
+    return if old > Settings.old
+    errors.add :birthday, I18n.t(".birth_day")
   end
 end

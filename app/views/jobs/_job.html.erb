@@ -1,6 +1,11 @@
 <div class="col-sm-6 e-left">
-  <div class="e-desc">
+  <div class="e-desc job_title">
+  <% if !check_expire?(job) && jobs_new(job).current_user?(current_user) %>
+    <h6 class="text-uppercase float-left"><%= link_to job.title, job %></h6>
+    <span class="expried"><%= t ".expire" %></span>
+  <% else %>
     <h6 class="text-uppercase"><%= link_to job.title, job %></h6>
+  <% end %>
     <hr>
     <ul class="desc-list">
       <li>
@@ -9,7 +14,7 @@
       </li>
       <li>
         <span><%= t ".salary" %></span>
-        <%= job.salary %>
+        <%= number_to_currency job.salary %>
       </li>
       <li>
         <span><%= t ".experience" %></span>
@@ -17,7 +22,7 @@
       </li>
       <li>
         <span><%= t ".expiration_date" %></span>
-        <%= job.expiration_date %>
+        <%= job.expiration_date.strftime("%d/%m/%Y") %>
       </li>
     </ul>
     <%= link_to t(".detail"), job, class: "btn wthree-bnr-btn text-capitalize" %>
