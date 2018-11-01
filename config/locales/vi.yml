@@ -145,6 +145,7 @@ vi:
       experience: "Kinh nghiệm"
       expiration_date: "Thời hạn"
       detail: "Chi tiết"
+      expire: "Hết hạn"
     update:
       error: "Cập nhật việc làm thất bại"
       success: "Cập nhật việc làm thành công"
@@ -189,6 +190,7 @@ vi:
       apply: "Nộp CV"
       r_login: "Đăng nhập để nộp CV"
       select_cv: "Chọn CV của bạn"
+      job_expried: "Việc làm đã hết hạn. Vui lòng cập nhật!"
     apply:
       select: "Chọn CV để nộp"
       choose_cv: "Chọn CV"
@@ -362,3 +364,11 @@ vi:
           not_a_number: "phải là một số"
           too_short: "quá ngắn"
           too_long: "quá dài"
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "VNĐ"
+        precision: 0
+  expiration_date: "phải muộn hơn ngày đăng việc"
+  birth_day: "phải nhỏ hơn ngày hiện tại!"

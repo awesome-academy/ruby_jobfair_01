@@ -144,6 +144,7 @@ your password will stay as it is."
       experience: "Experience"
       expiration_date: "Expire"
       detail: "Detail"
+      expire: "Expired"
     update:
       error: "Update career fail"
       success: "Update career success"
@@ -188,6 +189,7 @@ your password will stay as it is."
       apply: "Apply for job"
       r_login: "Login to apply CV"
       select_cv: "Select your CV"
+      job_expried: "This job has expried. Please update your job!"
     apply:
       select: "Select your CV to apply"
       choose_cv: "Choose CV"
@@ -308,3 +310,11 @@ your password will stay as it is."
   language: "Language"
   note: "Note"
   info: "Personal Infomation"
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "VND"
+        precision: 0
+  expiration_date: "must be later than the publish date"
+  birth_day: "must be smaller than the current date"

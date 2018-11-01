@@ -7,6 +7,11 @@
       </div>
       <div class="col-md-8 job_info">
         <h1><%= @job.title%></h1>
+        <% if !check_expire? @job%>
+          <div class="notify_expried pb-5" >
+            (*)<span><%= t ".job_expried" %></span>
+          </div>
+        <%end%>
 
         <h5><%= t ".company" %></h5><hr>
         <p><%= link_to @user.name, @user %></p><br>
@@ -15,7 +20,7 @@
         <p><%= @job.career.name %></p><br>
 
         <h5><%= t ".salary" %></h5><hr>
-        <p><%= @job.salary %></p><br>
+        <p><%= number_to_currency @job.salary %></p><br>
 
         <h5><%= t ".amount" %></h5><hr>
         <p><%= @job.amount %></p><br>
@@ -42,10 +47,10 @@
         <p><%= @user.address %></p><br>
 
         <h5><%= t ".publish_date" %></h5><hr>
-        <p><%= @job.publish_date %></p><br>
+        <p><%= @job.publish_date.strftime("%d/%m/%Y") %></p><br>
 
         <h5><%= t ".expiration_date" %></h5><hr>
-        <p><%= @job.expiration_date %></p><br>
+        <p><%= @job.expiration_date.strftime("%d/%m/%Y") %></p><br>
         <div class="button_cn">
         <% if @user.current_user? current_user %>
           <%= link_to t(".update"), edit_job_path,

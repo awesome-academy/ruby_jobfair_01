@@ -7,5 +7,11 @@ max_length_add: 80
 max_length_title: 100
 max_length_rank: 255
 max_length_lang: 255
+max_length_career: 255
+max_length_target: 500
+max_length_level: 255
+max_length_experience: 800
+max_length_note: 500
 expire_time: 2
 per_sheet: 6
+old: 18
