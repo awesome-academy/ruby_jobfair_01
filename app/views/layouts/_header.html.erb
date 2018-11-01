@@ -22,32 +22,33 @@
           </li>
         </ul>
         <% if logged_in? %>
-        <li class="dropdown nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
-          <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-            <%= t ".manager"%>
-            <b class="caret"></b>
+          <% if current_user.admin? %>
+            <li class="dropdown nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+            <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+              <%= t ".manager"%>
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t(".users"), users_path %></li>
+              <li><%= link_to t(".careers"), careers_path %></li>
+            </ul>
+            </li>
           <% end %>
-          <ul class="dropdown-menu">
-            <li><%= link_to t(".users"), "#" %></li>
-            <li><%= link_to t(".add_career"), new_career_path %></li>
-            <li><%= link_to t(".careers"), careers_path %></li>
-          </ul>
-        </li>
-        <li class="dropdown nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
-          <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-            <%= t ".account"%>
-            <b class="caret"></b>
-          <% end %>
-          <ul class="dropdown-menu">
-            <li><%= link_to t(".profile"), current_user %></li>
-            <li><%= link_to t(".settings"), "#" %></li>
-            <li class="divider"></li>
-            <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
-          </ul>
-        </li>
+          <li class="dropdown nav-item mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+            <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+              <%= t ".account"%>
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t(".profile"), current_user %></li>
+              <li><%= link_to t(".settings"), "#" %></li>
+              <li class="divider"></li>
+              <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
+            </ul>
+          </li>
         <% else %>
-        <%= link_to t("signup"), signup_path, class: "btn w3ls-btn text-uppercase font-weight-bold d-block" %>
-        <%= link_to t("login"), login_path, class: "btn w3ls-btn btn-2 ml-lg-1 text-uppercase font-weight-bold d-block" %>
+          <%= link_to t("signup"), signup_path, class: "btn w3ls-btn text-uppercase font-weight-bold d-block" %>
+          <%= link_to t("login"), login_path, class: "btn w3ls-btn btn-2 ml-lg-1 text-uppercase font-weight-bold d-block" %>
         <% end %>
         <div class="laguage">
           <%= link_to locale: "en" do %>

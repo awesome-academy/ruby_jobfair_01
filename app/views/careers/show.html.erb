@@ -2,10 +2,8 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="career_info">
-      <h1 class="fa fa-star">
-        <%= t ".description" %>
-        <%= @career.description%>
-      </h1>
+      <h1><%= @career.name %></h1>
+      <h6><%= t ".description" %><%= @career.description%></h6>
     </section>
   </aside>
 </div>

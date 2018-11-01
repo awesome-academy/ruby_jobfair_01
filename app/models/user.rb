@@ -23,10 +23,14 @@ class User < ApplicationRecord
     length: {minimum: Settings.min_length_phone,
              maximum: Settings.max_length_phone}
   validates :address, presence: true, length: {maximum: Settings.max_length_add}
-  enum role: %i(employeer candidate)
+  enum role: %i(employeer candidate admin)
   validates :role, inclusion: {in: roles.keys}
   enum gender: %i(male female)
   validates :gender, inclusion: {in: genders.keys}
+
+  scope :selected, ->{select :id, :name}
+  scope :ordered, ->{order created_at: :desc}
+
   class << self
     def digest string
       cost = if ActiveModel::SecurePassword.min_cost

@@ -57,6 +57,11 @@ en:
     create:
       error: "Create account fail"
       success: "Welcome to Finding Jobs"
+    index:
+      title: "List users"
+    user:
+      delete: "Delete"
+      sure: "Sure"
   error:
     contain: "Contain"
     errors: "errors"
@@ -277,6 +282,7 @@ your password will stay as it is."
       delete: "Delete"
       confirm: "Confirm"
       edit: "Edit"
+      create: "Create"
     edit:
       edit_career: "Edit career"
       career_name: "Career name"

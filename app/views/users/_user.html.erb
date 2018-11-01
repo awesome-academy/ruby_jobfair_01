@@ -2,4 +2,8 @@
   <span class="target">
     <%= link_to user.name, user %>
   </span>
+  <% if current_user.admin? && !user.current_user?(current_user) %>
+  | <%= link_to t(".delete"), user, method: :delete,
+    data: {confirm: t(".sure")} %>
+  <% end %>
 </li>

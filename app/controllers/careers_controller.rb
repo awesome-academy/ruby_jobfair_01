@@ -1,15 +1,13 @@
 class CareersController < ApplicationController
-  before_action :find_career, only: %i(show edit update destroy)
+  before_action :logged_in_user, :verify_admin,
+    only: %i(index show new edit update)
+  before_action :find_career, only: %i(show edit update)
 
   def index
     @careers = Career.page(params[:page]).per Settings.per_sheet
   end
 
-  def show
-    return if @career
-    flash[:danger] = t ".not_found_careers"
-    redirect_to root_path
-  end
+  def show; end
 
   def new
     @career = Career.new
@@ -20,7 +18,7 @@ class CareersController < ApplicationController
 
     if @career.save
       flash[:success] = t ".create_career_success"
-      redirect_to @career
+      redirect_to careers_url
     else
       flash[:danger] = t ".error"
       render :new
@@ -39,15 +37,6 @@ class CareersController < ApplicationController
     end
   end
 
-  def destroy
-    if @career.destroy
-      flash[:success] = t ".delete_success"
-    else
-      flash[:danger] = t ".delete_fail"
-    end
-    redirect_to career_path
-  end
-
   private
 
   def career_params
@@ -60,5 +49,12 @@ class CareersController < ApplicationController
     return if @career
     flash[:danger] = t ".not_found_careers"
     redirect_to root_path
+  end
+
+  def verify_admin
+    return if current_user.admin?
+
+    flash[:danger] = t ".permit"
+    redirect_to root_url
   end
 end
