@@ -146,6 +146,7 @@ vi:
       expiration_date: "Thời hạn"
       detail: "Chi tiết"
       expire: "Hết hạn"
+      new_job: "Mới"
     update:
       error: "Cập nhật việc làm thất bại"
       success: "Cập nhật việc làm thành công"
@@ -191,6 +192,8 @@ vi:
       r_login: "Đăng nhập để nộp CV"
       select_cv: "Chọn CV của bạn"
       job_expried: "Việc làm đã hết hạn. Vui lòng cập nhật!"
+      new_job: "Mới"
+      expire: "Hết hạn"
     apply:
       select: "Chọn CV để nộp"
       choose_cv: "Chọn CV"
@@ -372,3 +375,4 @@ vi:
         precision: 0
   expiration_date: "phải muộn hơn ngày đăng việc"
   birth_day: "phải nhỏ hơn ngày hiện tại!"
+  not_exist: "Trang không tồn tại"
