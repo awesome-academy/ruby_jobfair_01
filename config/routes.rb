@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :jobs
     resources :curriculum_vitaes
     resources :user_curriculum_vitaes
+    match "*unmatched_route", to: "application#route_not_found", via: :all
   end
 end

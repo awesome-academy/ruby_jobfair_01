@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
+  def route_not_found
+    flash[:warning] = t "not_exist"
+    redirect_to root_path
+  end
+
   private
 
   def default_url_options

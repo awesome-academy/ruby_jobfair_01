@@ -4,7 +4,12 @@
     <h6 class="text-uppercase float-left"><%= link_to job.title, job %></h6>
     <span class="expried"><%= t ".expire" %></span>
   <% else %>
-    <h6 class="text-uppercase"><%= link_to job.title, job %></h6>
+    <% if new_job? job%>
+      <h6 class="text-uppercase float-left"><%= link_to job.title, job %></h6>
+      <span class="expried"><%= t ".new_job" %></span>
+    <% else %>
+      <h6 class="text-uppercase"><%= link_to job.title, job %></h6>
+    <% end %>
   <% end %>
     <hr>
     <ul class="desc-list">

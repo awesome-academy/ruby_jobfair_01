@@ -96,6 +96,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.public_file_server.enabled = true
+
   config.action_mailer.delivery_method = :smtp
 
   host = "https://find-job-heroku.herokuapp.com"

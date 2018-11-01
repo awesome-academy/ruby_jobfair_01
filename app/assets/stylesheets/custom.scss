@@ -229,17 +229,44 @@ aside {
   padding: 5px;
   border-radius: 15px;
   margin-left: 10px;
-
+  width: 40px !important;
+  text-align: center;
 }
 
 .notify_expried {
   color: red;
   font-style: italic;
   font-size: 15px;
-  text-align: right !important;
 }
 
 .line_left{
   border-left: solid 1px gray;
   padding-left: 50px !important;
+}
+
+.flag {
+  width: 112px;
+  height: 56px;
+  margin: 0 auto;
+  padding-top: 15px;
+  position: relative; 
+  background: $blue;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.flag:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 13px solid white;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
 }

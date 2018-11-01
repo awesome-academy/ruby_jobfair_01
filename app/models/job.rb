@@ -45,6 +45,8 @@ class Job < ApplicationRecord
   private
 
   def end_after_start
+    return unless publish_date.presence
+    return unless expiration_date.presence
     return if expiration_date > publish_date
     errors.add :expiration_date, I18n.t(".expiration_date")
   end

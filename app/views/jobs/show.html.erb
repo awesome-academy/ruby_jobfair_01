@@ -6,11 +6,19 @@
         <%= image_tag "evolable-asia-logo.png" %>
       </div>
       <div class="col-md-8 job_info">
-        <h1><%= @job.title%></h1>
-        <% if !check_expire? @job%>
+        <% if !check_expire? @job %>
+          <span class="flag float-right"><%= t ".expire" %></span>
+          <h1><%= @job.title%></h1>
           <div class="notify_expried pb-5" >
             (*)<span><%= t ".job_expried" %></span>
           </div>
+        <% else %>
+          <% if new_job? @job %>
+            <span class="flag float-right"><%= t ".new_job" %></span>
+            <h1><%= @job.title%></h1>
+          <% else %>
+            <h1><%= @job.title%></h1>
+          <% end %>
         <%end%>
 
         <h5><%= t ".company" %></h5><hr>

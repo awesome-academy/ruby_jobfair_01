@@ -15,6 +15,9 @@
         </div>
         <div class="left_widget">
           <h3 class="left-widget-job">Careers</h3>
+          <%= select_tag :career_name, options_for_select(@career_options),
+            include_blank: t(".choose_career"),
+            class: "form-control search_career" %>
         </div>
       </div>
       <div class="col-lg-8">
