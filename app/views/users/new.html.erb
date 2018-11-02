@@ -8,8 +8,10 @@
 
       <%= f.label :role, t(".role") %><br>
       <% User.roles.keys.each do |key| %>
-        <%= f.radio_button :role, key, class: "radio_btn" %>
-        <%= f.label key.capitalize %>
+        <%if key != "admin"%>
+          <%= f.radio_button :role, key, class: "radio_btn" %>
+          <%= f.label key.capitalize %>
+        <% end %>
       <% end %><br>
 
       <%= f.label :name, t(".name") %>

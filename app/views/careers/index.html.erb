@@ -3,12 +3,11 @@
 <ul class="users">
   <% @careers.each do |career| %>
   <li class="fa fa-th">
-  <%= link_to career.name, career %>
-  | <%= link_to t(".delete"), career, method: :delete,
-    data: { confirm: t(".confirm") } %>
-  | <%= link_to t(".edit"), edit_career_path(career.id) %>
+    <%= link_to career.name, career %>
+    | <%= link_to t(".edit"), edit_career_path(career.id) %>
   </li>
   <br/>
   <% end %>
 </ul>
 <%= paginate @careers, theme: "twitter-bootstrap-3" %>
+<%= link_to t(".create"), new_career_path, class: "btn btn-lg btn-success" %>

@@ -59,6 +59,11 @@ vi:
     create:
       error: "Tạo tài khoản thất bại"
       success: "Tạo tài khoản thành công"
+    index:
+      title: "Danh sách người dùng"
+    user:
+      delete: "Xóa"
+      sure: "Xác nhận"
   error:
     contain: "Có"
     errors: "lỗi"
@@ -278,7 +283,8 @@ vi:
       career_list: "Danh sách nghề nghiệp"
       delete: "Xóa"
       confirm: "Xác nhận"
-      edit: "Edit"
+      edit: "sửa"
+      create: "Tạo mới"
     edit:
       edit_career: "Chỉnh sửa nghề ngiệp"
       career_name: "Tên nghề ngiệp"
